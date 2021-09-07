@@ -1,76 +1,83 @@
-import { CheckIcon, XIcon } from '@heroicons/react/solid'
+import { CheckIcon, XIcon } from "@heroicons/react/solid";
 
 const navigation = [
-  { name: 'Solutions', href: '#' },
-  { name: 'Pricing', href: '#' },
-  { name: 'Docs', href: '#' },
-  { name: 'Company', href: '#' },
-]
+  { name: "Solutions", href: "#" },
+  { name: "Pricing", href: "#" },
+  { name: "Docs", href: "#" },
+  { name: "Company", href: "#" },
+];
 const plans = [
   {
-    title: 'Small Agency',
+    title: "Small Agency",
     featured: false,
-    description: 'All your essential business finances, taken care of.',
+    description: "All your essential business finances, taken care of.",
     priceMonthly: 99,
     priceYearly: 56,
     mainFeatures: [
-      { id: 1, value: 'Basic invoicing' },
-      { id: 2, value: 'Easy to use accounting' },
-      { id: 3, value: 'Mutli-accounts' },
+      { id: 1, value: "Basic invoicing" },
+      { id: 2, value: "Easy to use accounting" },
+      { id: 3, value: "Mutli-accounts" },
     ],
   },
   {
-    title: 'Regular Agency',
+    title: "Regular Agency",
     featured: true,
-    description: 'The best financial services for your thriving business.',
+    description: "The best financial services for your thriving business.",
     priceMonthly: 199,
     priceYearly: 220,
     mainFeatures: [
-      { id: 1, value: 'Advanced invoicing' },
-      { id: 2, value: 'Easy to use accounting' },
-      { id: 3, value: 'Mutli-accounts' },
-      { id: 4, value: 'Tax planning toolkit' },
-      { id: 5, value: 'VAT & VATMOSS filing' },
-      { id: 6, value: 'Free bank transfers' },
+      { id: 1, value: "Advanced invoicing" },
+      { id: 2, value: "Easy to use accounting" },
+      { id: 3, value: "Mutli-accounts" },
+      { id: 4, value: "Tax planning toolkit" },
+      { id: 5, value: "VAT & VATMOSS filing" },
+      { id: 6, value: "Free bank transfers" },
     ],
   },
   {
-    title: 'Large Agency',
+    title: "Large Agency",
     featured: false,
-    description: 'Convenient features to take your business to the next level.',
+    description: "Convenient features to take your business to the next level.",
     priceMonthly: 399,
     priceYearly: 140,
     mainFeatures: [
-      { id: 1, value: 'Basic invoicing' },
-      { id: 2, value: 'Easy to use accounting' },
-      { id: 3, value: 'Mutli-accounts' },
-      { id: 4, value: 'Tax planning toolkit' },
+      { id: 1, value: "Basic invoicing" },
+      { id: 2, value: "Easy to use accounting" },
+      { id: 3, value: "Mutli-accounts" },
+      { id: 4, value: "Tax planning toolkit" },
     ],
   },
-]
+];
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function PricingPage() {
   return (
-    <div className="bg-gray-50">     
+    <div className="bg-gray-50">
       <main>
         {/* Pricing section */}
         <div>
-          <div className="relative bg-indigo-600">
+          <div className="relative bg-green-600">
             {/* Overlapping background */}
-            <div aria-hidden="true" className="hidden absolute bg-gray-50 w-full h-6 bottom-0 lg:block" />
+            <div
+              aria-hidden="true"
+              className="hidden absolute bg-gray-50 w-full h-6 bottom-0 lg:block"
+            />
 
             <div className="relative max-w-2xl mx-auto pt-16 px-4 text-center sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8">
               <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
-                <span className="block lg:inline">Try Oviond Free For 15 Days</span>
+                <span className="block lg:inline">
+                  Try Oviond Free For 15 Days
+                </span>
               </h1>
               <p className="mt-6 text-xl text-indigo-100">
-              Supercharged marketing monitoring and reporting software that scales with you.
+                Supercharged marketing monitoring and reporting software that
+                scales with you.
               </p>
               <p className="mt-6 text-xl text-indigo-100">
-              Start your free 15-day trial today, save 25% on our annual plans.
+                Start your free 15-day trial today, save 25% on our annual
+                plans.
               </p>
             </div>
 
@@ -107,15 +114,17 @@ export default function PricingPage() {
                   <div
                     key={plan.title}
                     className={classNames(
-                      plan.featured ? 'bg-white ring-2 ring-indigo-700 shadow-md' : 'bg-indigo-700 lg:bg-transparent',
-                      'pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12'
+                      plan.featured
+                        ? "bg-white ring-2 ring-indigo-700 shadow-md"
+                        : "bg-indigo-700 lg:bg-transparent",
+                      "pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12"
                     )}
                   >
                     <div>
                       <h3
                         className={classNames(
-                          plan.featured ? 'text-indigo-600' : 'text-white',
-                          'text-sm font-semibold uppercase tracking-wide'
+                          plan.featured ? "text-indigo-600" : "text-white",
+                          "text-sm font-semibold uppercase tracking-wide"
                         )}
                       >
                         {plan.title}
@@ -124,14 +133,19 @@ export default function PricingPage() {
                         <div className="mt-3 flex items-center">
                           <p
                             className={classNames(
-                              plan.featured ? 'text-indigo-600' : 'text-white',
-                              'text-4xl font-extrabold tracking-tight'
+                              plan.featured ? "text-indigo-600" : "text-white",
+                              "text-4xl font-extrabold tracking-tight"
                             )}
                           >
                             ${plan.priceMonthly}
                           </p>
                           <div className="ml-4">
-                            <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
+                            <p
+                              className={classNames(
+                                plan.featured ? "text-gray-700" : "text-white",
+                                "text-sm"
+                              )}
+                            >
                               USD / mo
                             </p>
                           </div>
@@ -140,9 +154,9 @@ export default function PricingPage() {
                           href="#"
                           className={classNames(
                             plan.featured
-                              ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                              : 'bg-white text-indigo-600 hover:bg-indigo-50',
-                            'mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
+                              ? "bg-indigo-600 text-white hover:bg-indigo-700"
+                              : "bg-white text-indigo-600 hover:bg-indigo-50",
+                            "mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full"
                           )}
                         >
                           Buy {plan.title}
@@ -154,29 +168,33 @@ export default function PricingPage() {
                       role="list"
                       className={classNames(
                         plan.featured
-                          ? 'border-gray-200 divide-gray-200'
-                          : 'border-indigo-500 divide-indigo-500 divide-opacity-75',
-                        'mt-7 border-t divide-y lg:border-t-0'
+                          ? "border-gray-200 divide-gray-200"
+                          : "border-indigo-500 divide-indigo-500 divide-opacity-75",
+                        "mt-7 border-t divide-y lg:border-t-0"
                       )}
                     >
                       {plan.mainFeatures.map((mainFeature) => (
-                        <li key={mainFeature.id} className="py-3 flex items-center">
+                        <li
+                          key={mainFeature.id}
+                          className="py-3 flex items-center"
+                        >
                           <CheckIcon
                             className={classNames(
-                              plan.featured ? 'text-indigo-500' : 'text-indigo-200',
-                              'w-5 h-5 flex-shrink-0'
+                              plan.featured
+                                ? "text-indigo-500"
+                                : "text-indigo-200",
+                              "w-5 h-5 flex-shrink-0"
                             )}
                             aria-hidden="true"
                           />
                           <span
                             className={classNames(
-                              plan.featured ? 'text-gray-600' : 'text-white',
-                              'ml-4 text-sm font-medium'
+                              plan.featured ? "text-gray-600" : "text-white",
+                              "ml-4 text-sm font-medium"
                             )}
                           >
                             {mainFeature.value}
                           </span>
-                          
                         </li>
                       ))}
                     </ul>
@@ -189,19 +207,19 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl font-extrabold text-gray-900">
-                Start your free trial today. </h1>
+              Start your free trial today.{" "}
+            </h1>
             <p className="mt-4 text-lg text-gray-500">
-            <button
+              <button
                 type="button"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            >
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
                 Get Started
-             </button>
+              </button>
             </p>
           </div>
-
         </div>
       </main>
     </div>
-  )
+  );
 }

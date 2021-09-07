@@ -6,7 +6,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Head>
-        <title>Next.js Starter Tailwind</title>
+        <link rel="shortcut icon" href="/oviond-logo.svg" />
+        <title>Oviond</title>
         <meta
           name="Description"
           content="A Next.js starter styled using Tailwind CSS."
